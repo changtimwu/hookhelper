@@ -11,6 +11,7 @@ class xxp
     ), 3000
   @rm_setcfg: (cfg) ->
     cfgs = cfg
+    console.log 'got cfg:',cfg
   @rm_getcfg: (err, f) ->
     f cfgs
 
