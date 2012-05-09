@@ -7,6 +7,8 @@ hookh.start()
 
 hookcls = ( cls) ->
   if cls instanceof Function and cls.name
+    cls.prototype.emit = (evname, arg)->
+      hookh.emit "#{cls.name}::#{evname}", arg
     for rmfn, f of cls when rmfn.indexOf('rm_')==0
       fn = rmfn.substr( 3)
       hookh.on "*::#{cls.name}::#{fn}", f
