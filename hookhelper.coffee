@@ -3,7 +3,7 @@ Hook = require('hook.io').Hook
 
 console.log 'service hooks start'
 
-config = fs.readFileSync 'config.json'
+config = JSON.parse fs.readFileSync('config.json')
 hookh = new Hook(config)
 hookh.start()
 
