@@ -1,5 +1,5 @@
 {
-	"name": "helloserv",
+	"name": "swixcore",
 	"m": true,
-	"peer": "clione"
+	"peer":"swixctl"
 }
